@@ -36,7 +36,8 @@ export class LoginPage {
         cy.get(this.titleText).should('contain', 'Dashboard')
     }
     assortWrongPassword() {
-        cy.get(this.errormassage).should('be.visible', 'Invalid credentials')
+        cy.get(this.errormassage)
+        .should('be.visible', 'Invalid credentials')
     }
     logOut() {
         cy.get(this.userdropdown).click()
